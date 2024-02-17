@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button, input {
+    font-family: 'Inter', system-ui;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    font-family: 'Inter', system-ui;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.drawer {
+    background-image: url("public/img/backround-drawer.png");
+    position: absolute;
+    width: 540px;
+    height: 100%;
+    right: 0;
+    box-shadow: 0px 0px 10px 0px #d5d5d5;
+    border-radius: 20px 0 0 20px;
+    padding: 30px;
+
+    h2 {
+       margin: 0;
+    }
+}
+
+.wrapper {
+    background: #ffffff;
+    box-shadow: 0px 0px 20px 0px #f3f3f3;
+    border-radius: 20px;
+    max-width: 1580px;
+    margin: auto;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    stroke: #3a40ff;
+    box-shadow: 0px 0px 35px 0px #545dff;
+    border-radius: 20px;
+    animation: ch-color-1 3s forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ch-color-1 {
+    from {
+        box-shadow: 0px 0px 35px 0px #f1f1f1;
+    }
+    50% {
+        box-shadow: 0px 0px 35px 0px #d6d8ff;
+    }
+    to {
+        box-shadow: 0px 0px 35px 0px #f1f1f1;
+    }
+}
+
+@keyframes ch-color-2 {
+    from {
+        box-shadow: 0px 0px 0px 0px #ffffff;
+    }
+    50% {
+        box-shadow: 0px 0px 20px 0px rgb(149, 151, 255);
+    }
+    to {
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.85);
+    }
+}
+
+.headerRight {
+    justify-content: space-between;
+}
+
+.card {
+    border: 2px solid #f5f5f5;
+    padding: 30px;
+    width: 300px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 0px #f3f3f3;
+    transition: 0.5s;
+    cursor: pointer;
+    p {
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .price {
+        border: 2px solid #f5f5f5;
+        margin-top: 10px;
+        background: #ffffff;
+        color: #000000;
+        border-radius: 20px;
+        padding: 15px;
+        box-shadow: 0px 0px 20px 0px #f3f3f3;
+    }
+
+}
+
+.favorite {
+    position: absolute;
+    cursor: pointer;
+}
+
+.cardImage {
+    width: max-content;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.search-block {
+    margin-bottom: 20px;
+    border: 2px solid #f5f5f5;
+    border-radius: 20px;
+
+    input {
+        font-size: 16px;
+        padding: 10px;
+}
+
+}
+
+.cartItem {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 15px;
+    border: 2px solid #f5f5f5;
+    transform: scale(1.00);
+    transition: 0.5s;
+
+    p {
+        font-size: 16px;
+    }
+
+    b {
+        font-size: 14px;
+    }
+
+    .removeBtn {
+        padding: 5px;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: 0.5s;
+    }
+
+    .removeBtn:hover {
+        opacity: 1;
+        transition: 0.5s;
+    }
+}
+
+.removeBtn {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.removeBtn:hover {
+    transition: 0.5s;
+}
+
+.cartItem:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+    box-shadow: 0px 5px 10px 0px #f6f6f6;
+}
+
+.cartTotalBlock {
+    justify-content: space-between;
+    margin-top: 30px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 0px #f3f3f3;
+    border: 2px solid #ffffff;
+    padding: 15px;
+    display: flex;
+    bottom: 0;
+    transition: 0.5s;
+
+    .orderButton {
+        width: 210px;
+        margin-left: 20px;
+        background: #3a40ff;
+        border-radius: 20px;
+        padding: 15px;
+        color: white;
+        animation: ch-color-2 3s forwards;
+        animation-iteration-count: infinite;
+    }
+
+
+    li {
+        text-align: center;
+        display: flex;
+    }
+
+    span {
+        margin-left: auto;
+    }
+
+    b {
+        margin-right: auto;
+        margin-left: 5px;
+    }
+
+    .cartTotalPrice {
+        width: 210px;
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 15px;
+        border: 2px solid #f5f5f5;
+    }
+
+}
+
+.userAndCard {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 11px;
+    width: 250px;
+    height: 65px;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0px 0px 30px 0px #f1f1f1;
+
+
+    .UserAndCardText {
+        margin: auto;
+        border-radius: 15px;
+        transition: 1s;
+    }
+}
+
+.userAndCard:hover {
+    border-radius: 10px;
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.userAndCardIcon {
+    cursor: pointer;
+    background-color: #ffffff;
+    width: 70px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px #f1f1f1;
+    transition: 0.5s;
+}
+
+.userAndCardIcon:hover {
+    border-radius: 10px;
+    transform: scale(1.03);
+    box-shadow: 0px 5px 10px 0px #eeeded;
+    transition: 0.5s;
+}
+
+.cartItems {
+    overflow: auto;
+}
+
+.cartTotalBlock:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+}
